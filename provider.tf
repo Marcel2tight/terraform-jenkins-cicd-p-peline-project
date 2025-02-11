@@ -14,7 +14,7 @@ terraform {
 # Terraform Provider Block
 provider "google" {
   # Configuratio options
-  project     = "jenkins-450601"
+  project     = "evident-display-449910-v6"
   region      = "us-central1"
   zone        = "us-central1-a"
 }
