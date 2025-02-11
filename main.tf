@@ -17,3 +17,11 @@ resource "google_compute_instance" "terraform-vm-instance" {
     }
   }
 }
+
+resource "google_storage_bucket" "prod-private-buckets" {
+  name          = "prod-no-public-access-bucket-po-${count.index}"
+  location      = "US"
+  force_destroy = true
+  public_access_prevention = "enforced"
+  count         = 2
+}
